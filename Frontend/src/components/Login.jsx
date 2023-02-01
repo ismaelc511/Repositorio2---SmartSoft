@@ -2,6 +2,7 @@ import React, { useState, useContext} from "react";
 
 import ErrorMessage from "./ErrorMessage";
 import { UserContext } from "../context/userContext";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -10,11 +11,13 @@ const Login = () => {
     const [token, setToken] = useContext(UserContext);
 
     const submitLogin = async () => {
+        
         const requestOptions = {
             method: "POST",
             headers: {"Content-Type": "application/x-www-form-urlencoded"},
             body: JSON.stringify('')
         }
+    
     }
 
     return (
